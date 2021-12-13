@@ -1,3 +1,21 @@
+
+// Question 2.Simulate and implement selective repeat sliding window protocol.
+
+// Description:
+//      It is the protocol for noice channel.
+//      In this multiple frames can be send at a time.
+//      Number of frames is depends of the window size.
+//      In this each frame is assigned with a sequence no.
+
+// Algorithm:
+//      In this all frames are sent without an acknowledgement which lie in window
+//      If the ACK of last frame is recieved ,then window move one step forward
+//      And new frame added in the window will sent
+//      This cycle repeats Until - There is no more frame (Window starts shrinking)
+//                               - ACk lost (In this case on respective frame is resent)
+
+
+
 #include<iostream>
 
 #include<conio.h>
@@ -303,6 +321,5 @@ sel_repeat sr;
 
 sr.input();
 
-//ducslectures.blogspot.in
 
 }

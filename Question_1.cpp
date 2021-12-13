@@ -1,3 +1,23 @@
+
+//Question 1.Simulate Cyclic Redundancy Check (CRC) error detection algorithm for noisy channel.
+
+// Description:
+//   Cyclic Redundancy Check (CRC) is a error detection technique used in data link layer
+//   In CRC algorithm :
+//     Sender's side:
+//        If l is the length of the divisor (in Binary)
+//        Then l-1 '0' bits are appended to the original messsage
+//        Then the appended message is divided by the divisor
+//        Then resulting (l-1) remainder is appended instesd of '0'
+//        Message sent
+
+//     Reciever's side:
+//        revieved message is divided by the divisor
+//        If remainder : all '0s'     -> (No Error) "Message Acccepted" 
+//        If remainder : not all '0s' ->  (Error)   "Message Rejected" 
+
+
+
 #include<iostream>
 using namespace std;
 int gen,msg;
